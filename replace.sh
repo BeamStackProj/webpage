@@ -8,9 +8,9 @@ cd docs
 
 ## MODIFY THESE WITH YOUR VALUES
 
-MY_TITLE='Foo Bar'
-MY_SUBTITLE='Foos the bar all the buzz'
-MY_USERNAME='MyGitHubUsername'
+MY_TITLE='Beamstack'
+MY_SUBTITLE='Beamstack Platform Documentation'
+MY_USERNAME='olufunbi'
 MY_PROJECT_SLUG='foo-bar'
 
 ## DO NOT MODIFY AFTER THE LINE ABOVE
@@ -18,8 +18,8 @@ MY_PROJECT_SLUG='foo-bar'
 MY_REPO="$MY_USERNAME\/$MY_PROJECT_SLUG"
 MY_GETTING_STARTED="$MY_PROJECT_SLUG"
 
-ORIGINAL_TITLE='DocsifyJS Template'
-ORIGINAL_SUBTITLE='Starter template for a markdown-based docs site'
+ORIGINAL_TITLE='Beamstack'
+ORIGINAL_SUBTITLE='CLI Tool for Deploying ML Workflows'
 ORIGINAL_REPO='MichaelCurrin\/docsify-js-template'
 ORIGINAL_GETTING_STARTED='docsifyjs-template'
 

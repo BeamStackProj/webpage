@@ -1,10 +1,10 @@
 <h1 id="cover-heading">
-  DocsifyJS Template  <!-- TODO: Update title -->
+  Beamstack  <!-- TODO: Update title -->
 </h1>
 
 [![GitHub tags](https://img.shields.io/github/tag/MichaelCurrin/docsify-js-template.svg)](https://GitHub.com/MichaelCurrin/docsify-js-template/tags/) <!-- TODO: Update username and repo name -->
 
->  Starter template for a Markdown-based docs site <!-- TODO: Replace with your description -->
+>  CLI Tool for Deploying ML Workflows <!-- TODO: Replace with your description -->
 
 
 <!-- TODO: Update to match your project's benefits/features. Git emojis work great here. -->
@@ -21,4 +21,4 @@
 [Get Started](#docsifyjs-template) <!-- TODO: Use ID of your homepage heading -->
 
 <!-- TODO: Set your background color or image. -->
-![color](#b3d9f8)
+![color](#314da7)
