@@ -73,7 +73,7 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 - Cross-platform Compatibility
 - Monitoring and Visualization
 - Integration with data and communication tools
-- nified pipeline for all data
+- Unified pipeline for all data
 - All-Inclusive Support
 
 
