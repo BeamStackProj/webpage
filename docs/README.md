@@ -93,15 +93,26 @@ Beamstack is being actively developed. Our releases can be found here
 ## Core Concepts
 ?> Assuming you are familiar with Docker, Kubernetes, and Machine Learning, Below are some concepts that separate Beamstack from other tools such as kubectl.
 
-- Placeholder 1
-- Placeholder 2
-- Placeholder 3
-- Placeholder 4
-- Placeholder 5
-- Placeholder 6
-- Placeholder 7
-- Placeholder 8
+### Robust CLI tool
+Beamstack comes equipped with a robust Command-Line Interface (CLI) tool, providing users with a powerful method to install, deploy, and manage resources within the Beamstack ecosystem. With this CLI tool, users can seamlessly interact with the resources managed by Beamstack, enabling efficient configuration, monitoring, and updating of machine learning workflows.
 
+### Abstraction Layers
+Beamstack introduces intuitive abstraction layers that allow users to define and deploy ML pipeline components with ease. This abstraction simplifies the intricate details of Kubernetes manifests, making deployment accessible to both beginners and experienced users.
+
+### CRD-based Deployments
+Leveraging the power of Kubernetes Custom Resource Definitions, Beamstack enables users to express their deployment specifications in a declarative manner. This approach not only enhances readability but also facilitates the effortless scaling and management of resources.
+
+### Infrastructure Agnosticism
+Beamstack empowers users to create data pipelines that are agnostic to the underlying infrastructure. Whether you're running on a small computer, in the cloud, or on-premises, Beamstack seamlessly adapts to your environment, ensuring consistent performance and reliability across diverse deployment scenarios.
+
+### Monitoring and Visualization
+Beamstack provides comprehensive monitoring capabilities, allowing users to visualize the state of containers and resources within their pipelines. With intuitive dashboards and real-time insights, users can effortlessly track the health and performance of their deployments, facilitating proactive management and optimization.
+
+### Integration with Data Stores and Message Queues
+Serving as a conduit for data production, Beamstack enables seamless integration with vector stores, feature stores, and message queues. Whether you're storing feature vectors, persisting data for analysis, or facilitating communication between components, Beamstack streamlines the data flow process, ensuring efficient data handling and interoperability across the pipeline.
+
+### Unified Pipeline for Streaming and Batch Data
+Beamstack offers a unified pipeline architecture that caters to both streaming data and batch datasets. Whether you're processing real-time streams or large-scale batch data, Beamstack provides the necessary abstractions and components to orchestrate end-to-end workflows, simplifying the development and deployment of hybrid data processing solutions.
 
 ## Getting Started
 
@@ -117,13 +128,15 @@ Beamstack is being actively developed. Our releases can be found here
 
 ## Usage
 
-### Basic Examples
 ### Use Cases
-- Placeholder 1
-- Placeholder 2
-- Placeholder 3
 
+- **ML Pipeline Components**: Define and deploy individual components of your machine learning pipeline, such as data preprocessors, model trainers, and result evaluators, using intuitive CRDs.
 
+- **Data Processing Pipelines**: Seamlessly orchestrate data processing workflows, managing tasks like data ingestion, transformation, and storage with the flexibility provided by Beamstack.
+
+- **Deployment Infrastructure**: Efficiently provision and manage deployment infrastructure resources, ensuring that your machine learning models run optimally in a Kubernetes environment.
+
+### Basic Examples
 
 ## CLI Command Reference
 
@@ -221,13 +234,13 @@ Beamstack is being actively developed. Our releases can be found here
 - `--namespace`: Specify the namespace.
 
 
-## FAQs
+<!-- ## FAQs
 
 - Placeholder 1
 - Placeholder 2
 - Placeholder 3
 - Placeholder 4
-- Placeholder 5
+- Placeholder 5 -->
 
 
 ## Support
