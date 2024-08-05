@@ -24,15 +24,6 @@ Moreover, Beamstack offers a rich set of features that enhance the efficiency an
 
 Beamstack is designed to be flexible and extensible, allowing users to customize their deployments based on their specific requirements. It supports various deployment options, including on-premises, cloud, and hybrid environments, providing the freedom to choose the infrastructure that best suits their needs.
 
-
-<!-- <div align="center">
-    <a href="https://michaelcurrin.github.io/docsify-js-tutorial/">
-        <img src="https://img.shields.io/badge/Teach_me-DocsifyJS_tutorial-blue" 
-            alt="DocsifyJS tutorial badge"
-            title="Go to tutorial">
-    </a>
-</div> -->
-
 ### Why Beamstack?
 Deploying machine learning and GenAI workflows should be easy. By extension, managing those workflows should be easy as well, beamstack offers a solution that streamlines the deployment process of complex workflows. It is an open-source tool, easy to understand, and versatile. 
 
@@ -68,9 +59,7 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 ----
 
 <div align="center">
-    <a href="hhttps://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png">
-        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png" alt="Architecture Diagram" width="700" />
-    </a>
+    <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png" alt="Architecture Diagram" width="700" />
 </div>
 
 Beamstack allows users to inject a Beam YAML file, select the pipeline runner of choice and forward it to the kubernetes cluster running on the cloud or on-prem
