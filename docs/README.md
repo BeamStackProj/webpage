@@ -68,7 +68,7 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 ----
 
 <div align="center">
-    <a href="https://michaelcurrin.github.io/docsify-js-template/">
+    <a href="hhttps://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png">
         <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png" alt="Architecture Diagram" width="700" />
     </a>
 </div>
