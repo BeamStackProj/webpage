@@ -59,7 +59,10 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 ----
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png" alt="Architecture Diagram" width="700" />
+    <picture>
+        <source srcset="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch1.png" media="(prefers-color-scheme:dark)">
+        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch.png" alt="Architecture Diagram" width="700">
+    </picture>
 </div>
 
 Beamstack allows users to inject a Beam YAML file, select the pipeline runner of choice and forward it to the kubernetes cluster running on the cloud or on-prem
