@@ -65,7 +65,17 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 - **Works Everywhere**: The best part is, Beamstack can build spaceships anywhere! Whether you want it to work in your backyard (local computer), at a friend's house (on-premises), or in the clouds (cloud services), Beamstack can do it all.
 
 ### Architecture
-<img src="https://github.com/BeamStackProj/webpage/blob/master/docs/arch.png" width="1000">
+----
+
+<div align="center">
+    <a href="https://michaelcurrin.github.io/docsify-js-template/">
+        <img src="/arch.png" alt="Architecture Diagram" alt="Go to website" width="700" />
+    </a>
+</div>
+
+Beamstack allows users to inject a Beam YAML file, select the pipeline runner of choice and forward it to the kubernetes cluster running on the cloud or on-prem
+
+----
 
 ### Features
 - Robust Command Line Tool
