@@ -60,7 +60,7 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 
 <div align="center">
     <picture>
-        <source srcset="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-dark-test.png" media="(prefers-color-scheme:dark)">
+        <source srcset="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-dark.png" media="(prefers-color-scheme:dark)">
         <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-light.png" alt="Architecture Diagram" width="700">
     </picture>
 </div>
