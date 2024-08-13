@@ -1,10 +1,13 @@
 <!-- TODO: Update with your values. -->
-# Beamstack
-> CLI Tool for Deploying ML Workflows
+<!-- # Beamstack -->
+
+<div align="center">
+    <picture>
+        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/logo.png" alt="logo" width="600">
+    </picture>
+</div>
 
  <!-- TODO: Update repo links and change license type if needed. -->
-
-[![Made with latest Docsify](https://img.shields.io/npm/v/docsify/latest?label=docsify)](https://docsify.js.org/)
 
 
 <!-- TODO: You can delete the About and Create a Docsify site sections if you create a new project from this template -->
@@ -27,7 +30,7 @@ Beamstack is designed to be flexible and extensible, allowing users to customize
 ### Why Beamstack?
 Deploying machine learning and GenAI workflows should be easy. By extension, managing those workflows should be easy as well, beamstack offers a solution that streamlines the deployment process of complex workflows. It is an open-source tool, easy to understand, and versatile. 
 
-### How it works
+<!-- ### How it works
 Imagine you have a big box of Lego bricks and want to build a cool spaceship. But instead of figuring out which bricks to use and where to put them, you have a magical helper called Beamstack that does it all for you!
 
 Here's how Beamstack works, step by step as if you're playing with Legos:
@@ -53,35 +56,38 @@ Here's how Beamstack works, step by step as if you're playing with Legos:
 - **Keep an Eye on It**: Beamstack also helps you keep an eye on your spaceship. It has a special control panel where you can see how your spaceship is doing, if it needs more fuel, or if any parts need fixing.
 
 
-- **Works Everywhere**: The best part is, Beamstack can build spaceships anywhere! Whether you want it to work in your backyard (local computer), at a friend's house (on-premises), or in the clouds (cloud services), Beamstack can do it all.
+- **Works Everywhere**: The best part is, Beamstack can build spaceships anywhere! Whether you want it to work in your backyard (local computer), at a friend's house (on-premises), or in the clouds (cloud services), Beamstack can do it all. -->
 
-### Architecture
-----
+<!-- ### Architecture -->
+<!-- ---- -->
 
-<div align="center">
+<!-- <div align="center">
     <picture>
         <source srcset="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-dark.png" media="(prefers-color-scheme:dark)">
         <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-light.png" alt="Architecture Diagram" width="700">
     </picture>
-</div>
+</div> -->
 
-Beamstack allows users to inject a Beam YAML file, select the pipeline runner of choice and forward it to the kubernetes cluster running on the cloud or on-prem
+<!-- Beamstack allows users to inject a Beam YAML file, select the pipeline runner of choice and forward it to the kubernetes cluster running on the cloud or on-prem -->
 
-----
+<!-- ---- -->
 
 ### Features
 - Robust Command Line Tool
 - Simple Abstraction Layers
 - CRD-Based Deployments
 - Cross-platform Compatibility
+- Configuration Management
+- Customization Options
 - Monitoring and Visualization
 - Integration with data and communication tools
 - Unified pipeline for all data
 - All-Inclusive Support
+- Versioning & Updates
 
 
 ### Development Status
-Beamstack is being actively developed. Our releases can be found here
+Beamstack is being actively developed. Our releases can be found [here](https://github.com/BeamStackProj/beamstack-cli)
 
 ## Understand the Basics
 
@@ -140,6 +146,25 @@ Beamstack offers a unified pipeline architecture that caters to both streaming d
 - **Deployment Infrastructure**: Efficiently provision and manage deployment infrastructure resources, ensuring that your machine learning models run optimally in a Kubernetes environment.
 
 ### Basic Examples
+
+#### Initialize a Kubernetes Cluster with Beamstack & Monitoring tools
+> `beamstack init -m`
+
+#### Get the current kubernetes cluster context and profile info
+> `beamstack info`
+
+#### Display the name, status and age of a cluster
+> `beamstack info cluster`
+
+#### Create a flink cluster
+> `beamstack create flink-cluster [cluster-name]`
+
+#### Open up flink UI
+> `beamstack open flink [flink-cluster-name]`
+
+#### Open up Grafana dashboard
+> `beamstack open dashboard`
+
 
 ## CLI Command Reference
 
@@ -250,9 +275,13 @@ Beamstack offers a unified pipeline architecture that caters to both streaming d
 
 - Make sure you've read understanding the basics and the getting started guide.
 - Looked for an answer in the frequently asked questions.
-- Read existing issues
-- Ask a question in the Beamstack Slack channel 
+- Read existing [issues](https://github.com/BeamStackProj/beamstack-cli/issues)
+- Ask a question in the Beamstack [discord channel](https://discord.gg/fYNnNVaEFK)
 - Report a bug, or request a feature
+
+## Become a contributor
+- Join our discord channel [here](https://discord.gg/fYNnNVaEFK)
+
 
 ## Roadmap
 
