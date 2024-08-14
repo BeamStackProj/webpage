@@ -13,7 +13,6 @@
 <!-- TODO: You can delete the About and Create a Docsify site sections if you create a new project from this template -->
 
 ## Overview
-----
 
 ### What is Beamstack?
 Beamstack is a command line interface (CLI) tool that makes deploying machine learning workflows easier with Apache Beam on Kubernetes. 
@@ -122,9 +121,9 @@ Beamstack offers a unified pipeline architecture that caters to both streaming d
 !> [Kubectl](https://kubernetes.io/docs/tasks/tools/) must be installed on your local machine
 
 ### Install Beamstack CLI
-> - Download and run the latest Beamstack version from [here](https://github.com/BeamStackProj/beamstack-cli/tree/main/releases).
+?> Download and run the latest Beamstack version from [here](https://github.com/BeamStackProj/beamstack-cli/tree/main/releases).
 
-> - Run `Beamstack version` to verify that it has been successfully installed
+?>Run `Beamstack version` to verify that it has been successfully installed
 
 ## Usage
 

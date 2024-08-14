@@ -7,43 +7,96 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>Beamstack</title> <!-- TODO: Update. -->
-    <meta name="description"
-        content="Documentation for the Beamstack project"> <!-- TODO: Update. -->
+    <title>Beamstack</title>
+    <meta name="description" content="Documentation for the Beamstack project">
 
-        <!-- Theme: Simple -->
-        <!-- Theme: Simple (light + dark) -->
-        <!-- <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+    <!-- Theme: Simple -->
+    <!-- Theme: Simple (light + dark) -->
+    <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 
-        <!-- Core Dark - Dark Mode Only (add-on) -->
-        <link rel="stylesheet" media="(prefers-color-scheme: light)" href="//unpkg.com/docsify@4/lib/themes/buble.css">
-        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="//unpkg.com/docsify@4/lib/themes/dark.css">
+    <!-- Core Dark - Dark Mode Only (add-on) -->
+    <!-- <link rel="stylesheet" media="(prefers-color-scheme: light)" href="//unpkg.com/docsify@4/lib/themes/buble.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="//unpkg.com/docsify@4/lib/themes/dark.css"> -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 
-        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-theme-switcher@1/dist/theme-switcher.min.css" -->
-/>
-        
-    
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-theme-switcher@1/dist/theme-switcher.min.css" -->
+
+
     <style>
         /* Fix issue on mobile devices where a custom cover image goes off the screen. */
         section.cover.show {
             height: 100%;
         }
-        :root {
-            --theme-hue: 325;
-        }
-        
 
+        :root {
+            --light-theme-color: #3b7be3; /* Light mode color */
+            --dark-theme-color: #6fa3f7;  /* Dark mode color */
+        }
+
+        /* Custom styling for content width */
+        .markdown-section {
+            max-width: 1200px; /* Adjust this value as needed */
+            margin: 0 auto; /* Center the content */
+        }
+
+        /* If needed, adjust the container's padding */
+        .container {
+            padding: 0 20px; /* Adjust the padding as needed */
+        }
+
+        /* Apply the theme color for light mode */
+        @media (prefers-color-scheme: light) {
+            body {
+                --theme-color: var(--light-theme-color);
+            }
+        }
+
+        /* Apply the theme color for dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                --theme-color: var(--dark-theme-color);
+            }
+        }
+
+        /* Example of applying theme color to link hover */
+        .sidebar-nav a:hover{
+            color: var(--theme-color);
+        }
+
+        li.collapse>a {
+            color: var(--theme-color);
+        }
+
+        .sidebar-nav li.active>a, .sidebar-nav li.collapse>a {
+            color: var(--theme-color);
+        }
+
+        .markdown-section a.anchor:hover{
+            color: var(--theme-color);
+        }
+
+        .markdown-section h2 {
+            color: var(--theme-color);
+        }
+
+        /* :root {
+            --theme-hue: 325;
+        } */
     </style>
 
     <!-- Edit on GitHub plugin. -->
-    <script src="//unpkg.com/docsify-edit-on-github@1/index.js"></script>
+    <!-- <script src="//unpkg.com/docsify-edit-on-github@1/index.js"></script> -->
 
-    <!-- Docsify core. -->
+    <!-- Docsify core. (To render the page)-->
     <script defer src="//unpkg.com/docsify@4/lib/docsify.min.js"></script>
+
     <!-- Syntax highlighting.-->
     <!-- TODO: Add prism-bash, prism-python, prism-javascript etc. as separate items so you can load syntax highlighting for that language. -->
-    <script defer src="//unpkg.com/prismjs@1/components/prism-markdown.min.js"></script>
+    <!-- <script defer src="//unpkg.com/prismjs@1/components/prism-markdown.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-collapse@2/dist/docsify-collapse.min.js"></script>
+
 </head>
 
 <body>
@@ -53,27 +106,76 @@
         var repoUrl = "https://github.com/BeamStackProj/webpage"; // TODO: Update.
         var editPath = repoUrl + "/blob/master/docs/";
         // var editMsg = "📝 Edit on GitHub";
-        
+        console.log("The Script is running perfectly!!!")
         window.$docsify = {
             name: "Beamstack", // TODO: Update.
             repo: repoUrl,
-            
-            auto2top: true,
-            coverpage: true,
-            loadSidebar: true,
-            subMaxLevel: 2,
-            themeable: {
-                readyTransition : true, // default
-                responsiveTables: true  // default
-            },
-            themeColor: "#314da7", // TODO: Set your own color.
 
+            auto2top: true,
+            coverpage: false,
+            executeScript: true,
+            loadSidebar: true,
+            logo: '/beamstack-icon.svg',
+            subMaxLevel: 2,
+            sidebarDisplayLevel: 0, // set sidebar display level
+
+            themeable: {
+                readyTransition: false, // default
+                responsiveTables: false  // default
+            },
+            themeColor: "#ffffff", // TODO: Set your own color (314da7, d9be3b, #3b7be3).
+            sidebar: '_sidebar.md',
+            // complete configuration parameters
+            search: {
+                maxAge: 86400000, // Expiration time, the default one day
+                paths: [], // or 'auto'
+                placeholder: 'Type to search',
+
+                // Localization
+                placeholder: {
+                    '/zh-cn/': '搜索',
+                    '/': 'Type to search',
+                },
+
+                noData: 'No Results!',
+
+                // Localization
+                noData: {
+                    '/zh-cn/': '找不到结果',
+                    '/': 'No Results',
+                },
+
+                // Headline depth, 1 - 6
+                depth: 2,
+
+                hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+
+                // To avoid search index collision
+                // between multiple websites under the same domain
+                namespace: 'website-1',
+
+                // Use different indexes for path prefixes (namespaces).
+                // NOTE: Only works in 'auto' mode.
+                //
+                // When initialiazing an index, we look for the first path from the sidebar.
+                // If it matches the prefix from the list, we switch to the corresponding index.
+                pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+                // You can provide a regexp to match prefixes. In this case,
+                // the matching substring will be used to identify the index
+                pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/,
+            },
             plugins: [
-                EditOnGithubPlugin.create(editPath, null, editMsg)
+                // EditOnGithubPlugin.create(editPath, null, editMsg)
             ],
         }
 
     </script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-collapse@2/dist/docsify-collapse.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 </body>
 
