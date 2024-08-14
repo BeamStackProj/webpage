@@ -37,7 +37,7 @@ Deploying machine learning and GenAI workflows should be easy. By extension, man
 <div>
     <picture>
         <source srcset="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-dark.png" media="(prefers-color-scheme:dark)">
-        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-light.png" alt="Architecture Diagram" width="1000">
+        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/architecture-light.png" media="(prefers-color-scheme:light)"alt="Architecture Diagram" width="1000">
     </picture>
 </div>
 
