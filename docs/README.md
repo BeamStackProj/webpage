@@ -13,6 +13,7 @@
 <!-- TODO: You can delete the About and Create a Docsify site sections if you create a new project from this template -->
 
 ## Overview
+----
 
 ### What is Beamstack?
 Beamstack is a command line interface (CLI) tool that makes deploying machine learning workflows easier with Apache Beam on Kubernetes. 
@@ -30,47 +31,37 @@ Beamstack is designed to be flexible and extensible, allowing users to customize
 ### Why Beamstack?
 Deploying machine learning and GenAI workflows should be easy. By extension, managing those workflows should be easy as well, beamstack offers a solution that streamlines the deployment process of complex workflows. It is an open-source tool, easy to understand, and versatile. 
 
-<!-- ### How it works
-Imagine you have a big box of Lego bricks and want to build a cool spaceship. But instead of figuring out which bricks to use and where to put them, you have a magical helper called Beamstack that does it all for you!
+### Architecture
+----
 
-Here's how Beamstack works, step by step as if you're playing with Legos:
-
-- **Easy Commands**: Beamstack allows you to enter simple commands, like a Lego manual, to build different parts of your spaceship (which is your machine learning project).
-
-
-- **Special Blocks (CRDs)**: Beamstack has special Lego blocks called CRDs (Custom Resource Definitions). These blocks are super smart and know exactly how to fit into your spaceship to make it work perfectly.
-
-
-- **Tell Beamstack What You Want**: You tell Beamstack what kind of spaceship you want by giving it a list of parts (like engines, wings, and control panels). This list is like a recipe for your spaceship. This can be done by providing a YAML file with the appropriate components you wish for. 
-
-
-- **Beamstack Builds for You**: Beamstack takes your list and starts building. It uses the special blocks (CRDs) and puts them together in the right way, just like following a Lego manual.
-
-
-- **Magic Assembly Line**: Beamstack has a magic assembly line that works super fast. It puts all the parts together and checks to make sure everything is perfect.
-
-
-- **Watch Your Spaceship Fly**: Once Beamstack is done, your spaceship is ready to fly! You can see it in action, zooming around and doing all the cool things you wanted it to do.
-
-
-- **Keep an Eye on It**: Beamstack also helps you keep an eye on your spaceship. It has a special control panel where you can see how your spaceship is doing, if it needs more fuel, or if any parts need fixing.
-
-
-- **Works Everywhere**: The best part is, Beamstack can build spaceships anywhere! Whether you want it to work in your backyard (local computer), at a friend's house (on-premises), or in the clouds (cloud services), Beamstack can do it all. -->
-
-<!-- ### Architecture -->
-<!-- ---- -->
-
-<!-- <div align="center">
+<div>
     <picture>
         <source srcset="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-dark.png" media="(prefers-color-scheme:dark)">
-        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-light.png" alt="Architecture Diagram" width="700">
+        <img src="https://raw.githubusercontent.com/BeamStackProj/webpage/master/docs/arch-light.png" alt="Architecture Diagram" width="1000">
     </picture>
-</div> -->
+</div>
 
-<!-- Beamstack allows users to inject a Beam YAML file, select the pipeline runner of choice and forward it to the kubernetes cluster running on the cloud or on-prem -->
+### How it works
+----
+Beamstack has a simple and intuitive flow of operation explained below.
 
-<!-- ---- -->
+1. **User Interaction**: The process begins with the user, who interacts with Beamstack using the Beam YAML file. This YAML file defines the machine learning (ML) workflows, data processing tasks, and deployment configurations.
+
+2. **Beam YAML File**: This file contains the specifications for the ML pipeline, such as the type of data processing required, the models to be used, and how they should be deployed on Kubernetes.
+
+3. **Beamstack**: Beamstack takes the YAML configuration and processes it. It converts the YAML specifications into a set of Kubernetes Custom Resource Definitions (CRDs) and deployment configurations that Kubernetes can understand. This ultimately abstracts the complexities of Kubernetes and simplifies the deployment process. 
+
+4. **Kubernetes Integration**: Beamstack integrates with various Kubernetes operators for different runners like Apache Spark, Apache Samza, etc. These operators are responsible for executing the distributed data processing tasks defined in the Beam YAML file.
+
+5. **Worker Pool**: Within the Kubernetes cluster, a pool of workers (Beamstack Harness instances) is deployed. These workers are responsible for running the ML workflows and data processing tasks as defined by the user. Each instance of Beamstack Harness runs a part of the pipeline, ensuring that the workload is distributed efficiently across the cluster.
+
+6. **Data Storage**: The data processed by the workflows is stored in a centralized data storage system, which is also part of the Kubernetes ecosystem. Beamstack ensures that data is stored and retrieved efficiently during the pipeline execution.
+
+7. **Monitoring Stack**: Beamstack includes a monitoring stack that leverages Grafana and Prometheus. This stack continuously monitors the health and performance of the ML workflows and the underlying infrastructure. It provides insights into resource utilization, pipeline performance, and any potential issues.
+
+8. **Multi-Environment Support**: Beamstack is designed to be flexible and can be deployed in various environments, including on-premises data centers, cloud platforms like AWS, Azure, and Google Cloud, or a hybrid setup. This flexibility allows users to choose the infrastructure that best fits their needs.
+
+----
 
 ### Features
 - Robust Command Line Tool
